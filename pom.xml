@@ -39,14 +39,6 @@
             </goals>
           </execution>
         </executions>
-          <configuration>
-              <relocations>
-                  <relocation>
-                      <pattern>io.github.beefdev.uuidswitcher</pattern>
-                      <shadedPattern>ac.stevano.utils</shadedPattern>
-                  </relocation>
-              </relocations>
-          </configuration>
       </plugin>
     </plugins>
     <resources>
@@ -57,14 +49,18 @@
     </resources>
   </build>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>Utils</name>
+            <url>https://maven.pkg.github.com/adrian0671232/Utils</url>
+        </repository>
+    </distributionManagement>
+
   <repositories>
       <repository>
-          <id>spigotmc-repo</id>
+          <id>spigot-repo</id>
           <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-      </repository>
-      <repository>
-          <id>sonatype</id>
-          <url>https://oss.sonatype.org/content/groups/public/</url>
       </repository>
   </repositories>
 
